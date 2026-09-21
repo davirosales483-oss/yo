@@ -2,15 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>21 de Septiembre 🌼</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Audio de fondo -->
-  <audio id="bg-music" loop></audio>
+  <!-- Elemento de Audio optimizado para teléfono -->
+  <audio id="bg-music" loop preload="auto" playsinline></audio>
 
   <!-- Pantalla Inicial Negra -->
   <div id="start-screen">
@@ -90,6 +90,7 @@
     </div>
   </div>
 
+  <!-- CARGA DE SCRIPTS: config.js primero, luego script.js -->
   <script src="config.js"></script>
   <script src="script.js"></script>
 </body>

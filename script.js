@@ -1,16 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Configurar textos iniciales desde config.js
+  // Configurar textos e imágenes desde config.js
   document.getElementById("badge-text").textContent = CONFIG.tituloInicial;
   document.getElementById("title-text").textContent = CONFIG.mensajeInicial;
   document.getElementById("subtitle-text").textContent = CONFIG.submensajeInicial;
-  
-  // Asignar personaje y música
   document.getElementById("floating-character").src = CONFIG.personajeUrl;
+
+  // Asignar fuente de la música
   const music = document.getElementById("bg-music");
   music.src = CONFIG.musicaUrl;
 });
 
-document.getElementById("push-btn").addEventListener("click", () => {
+document.getElementById("push-btn").addEventListener("click", function() {
+  const music = document.getElementById("bg-music");
+  
+  // Forzar reproducción de audio tras toque del usuario en pantalla
+  if (music) {
+    music.play().then(() => {
+      console.log("Audio sonando correctamente");
+    }).catch(err => {
+      console.log("Error al reproducir audio:", err);
+    });
+  }
+
   // 1. Ocultar pantalla inicial
   document.getElementById("start-screen").classList.add("hidden");
 
@@ -18,11 +29,7 @@ document.getElementById("push-btn").addEventListener("click", () => {
   const flowerScene = document.getElementById("flower-scene");
   flowerScene.classList.remove("hidden");
 
-  // 3. Reproducir música
-  const music = document.getElementById("bg-music");
-  music.play().catch(e => console.log("Audio play error:", e));
-
-  // 4. Iniciar efectos
+  // 3. Iniciar efectos y mensajes
   createSparkles();
   startMessageRotation();
 });
@@ -49,7 +56,7 @@ function startMessageRotation() {
 // Generador de luces flotantes
 function createSparkles() {
   const container = document.getElementById("sparkles-container");
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < 25; i++) {
     const sparkle = document.createElement("div");
     sparkle.style.position = "absolute";
     sparkle.style.width = Math.random() * 5 + 2 + "px";

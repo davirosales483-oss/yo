@@ -5,7 +5,7 @@ const CONFIG = {
   submensajeInicial: "Un detalle especial para alegrarte el día. Presiona el botón para descubrirlo.",
   
   // Canción de fondo: Sparks - Coldplay (Audio MP3 Directo)
-  musicaUrl: "https://files.catbox.moe/k37hms.mp3",
+  musicaUrl: "https://ia801503.us.archive.org/15/items/coldplay-sparks/Coldplay%20-%20Sparks.mp3",
   
   // Personaje flotante (Snoopy)
   personajeUrl: "https://pngimg.com/uploads/snoopy/snoopy_PNG16.png",

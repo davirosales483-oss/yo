@@ -24,13 +24,15 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 100;
+  padding: 20px;
   transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
 .welcome-card {
   text-align: center;
+  width: 100%;
   max-width: 380px;
-  padding: 30px;
+  padding: 30px 20px;
   background: rgba(20, 20, 20, 0.85);
   border: 1px solid rgba(255, 230, 0, 0.25);
   border-radius: 24px;
@@ -71,6 +73,8 @@ body {
   cursor: pointer;
   outline: none;
   box-shadow: 0 0 20px rgba(255, 230, 0, 0.3);
+  width: 100%;
+  max-width: 280px;
 }
 
 .btn-top {
@@ -78,9 +82,9 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 16px 32px;
+  padding: 16px 24px;
   border-radius: 50px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   background: #ffe600;
   color: #111;
@@ -112,7 +116,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding-top: 50px;
+  padding-top: 40px;
   background: radial-gradient(circle at bottom, #111e18 0%, #050505 80%);
 }
 
@@ -120,7 +124,7 @@ body {
 .character {
   position: absolute;
   top: 15%;
-  width: 90px;
+  width: 80px;
   z-index: 15;
   filter: drop-shadow(0 0 10px rgba(255, 230, 0, 0.4));
   animation: flyAround 14s ease-in-out infinite alternate;
@@ -144,7 +148,7 @@ body {
 }
 
 .message-text {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #ffe600;
   text-shadow: 0 0 15px rgba(255, 230, 0, 0.6);
   opacity: 0;
@@ -160,7 +164,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 50px;
+  gap: 40px;
   height: 65%;
   width: 100%;
   position: relative;
@@ -247,7 +251,6 @@ body {
 .flower-2 .petal { animation-delay: 2.7s; }
 .flower-3 .petal { animation-delay: 3.0s; }
 
-/* Posición en abanico circular de los pétalos */
 .p1 { --rot: 0deg; }
 .p2 { --rot: 45deg; }
 .p3 { --rot: 90deg; }
@@ -257,7 +260,40 @@ body {
 .p7 { --rot: 270deg; }
 .p8 { --rot: 315deg; }
 
-/* Keyframes de florecimiento */
+/* AJUSTES ESPECÍFICOS PARA TELÉFONOS (RESPONSIVE) */
+@media (max-width: 600px) {
+  .message-text {
+    font-size: 1.15rem;
+  }
+
+  .flower-container {
+    gap: 20px;
+  }
+
+  .flower-1 .stem { height: 160px; }
+  .flower-2 .stem { height: 230px; }
+  .flower-3 .stem { height: 145px; }
+
+  .center {
+    width: 40px;
+    height: 40px;
+    top: -20px;
+  }
+
+  .petal {
+    width: 18px;
+    height: 50px;
+    top: -50px;
+    left: -9px;
+  }
+
+  .character {
+    width: 65px;
+    top: 10%;
+  }
+}
+
+/* Keyframes */
 @keyframes growStem { from { height: 0; } }
 @keyframes popCenter { to { transform: scale(1); } }
 @keyframes bloomPetal { 

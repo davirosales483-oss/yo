@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>21 de Septiembre 🌼</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Audio de fondo -->
+  <audio id="bg-music" loop></audio>
+
+  <!-- Pantalla Inicial Negra -->
+  <div id="start-screen">
+    <div class="welcome-card">
+      <div id="badge-text" class="badge"></div>
+      <h1 id="title-text"></h1>
+      <p id="subtitle-text"></p>
+
+      <!-- Push Button 3D -->
+      <button id="push-btn">
+        <span class="btn-top">
+          <span class="icon">✨</span> Toca aquí para abrir
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Escena Principal de las Flores -->
+  <div id="flower-scene" class="hidden">
+    <!-- Personaje Flotante (Snoopy) -->
+    <img id="floating-character" class="character" alt="Personaje" />
+
+    <!-- Brillos/Luces de fondo -->
+    <div id="sparkles-container"></div>
+
+    <!-- Caja de mensajes dinámicos -->
+    <div class="message-box">
+      <h2 id="dynamic-message" class="message-text"></h2>
+    </div>
+
+    <!-- Ramillete de Flores -->
+    <div class="flower-container">
+      <!-- Flor 1 -->
+      <div class="flower flower-1">
+        <div class="stem">
+          <div class="leaf leaf-left"></div>
+          <div class="leaf leaf-right"></div>
+        </div>
+        <div class="center"></div>
+        <div class="petals">
+          <div class="petal p1"></div><div class="petal p2"></div>
+          <div class="petal p3"></div><div class="petal p4"></div>
+          <div class="petal p5"></div><div class="petal p6"></div>
+          <div class="petal p7"></div><div class="petal p8"></div>
+        </div>
+      </div>
+
+      <!-- Flor Central -->
+      <div class="flower flower-2">
+        <div class="stem">
+          <div class="leaf leaf-left"></div>
+          <div class="leaf leaf-right"></div>
+        </div>
+        <div class="center"></div>
+        <div class="petals">
+          <div class="petal p1"></div><div class="petal p2"></div>
+          <div class="petal p3"></div><div class="petal p4"></div>
+          <div class="petal p5"></div><div class="petal p6"></div>
+          <div class="petal p7"></div><div class="petal p8"></div>
+        </div>
+      </div>
+
+      <!-- Flor 3 -->
+      <div class="flower flower-3">
+        <div class="stem">
+          <div class="leaf leaf-left"></div>
+          <div class="leaf leaf-right"></div>
+        </div>
+        <div class="center"></div>
+        <div class="petals">
+          <div class="petal p1"></div><div class="petal p2"></div>
+          <div class="petal p3"></div><div class="petal p4"></div>
+          <div class="petal p5"></div><div class="petal p6"></div>
+          <div class="petal p7"></div><div class="petal p8"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
